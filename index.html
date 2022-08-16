@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Microsoft todo list</title>
+</head>
+
+<body>
+
+    <div class="todolist">
+        <!-- ! Start left  -->
+        <div class="todolist__left">
+
+            <div class="todolist__left__first">
+                <p class="todolist__left__first__text">Pradeep visway</p>
+                <i class="fa-solid fa-magnifying-glass active-lupa"></i>
+            </div>
+
+            <div class="todolist__left__second">
+                <a href="#" class="todolist__left__second__link1 active-back">
+                    <i class="fa-solid fa-sun active-sun"></i>
+                    <p class="todolist__left__second__link1__text1">My Day</p>
+                    <p class="todolist__left__second__link1__text2">5</p>
+                </a>
+
+                <a href="#" class="todolist__left__second__link2">
+                    <i class="fa-solid fa-house-circle-check active-home"></i>
+                    <p class="todolist__left__second__link2__text1">To-Do</p>
+                    <p class="todolist__left__second__link2__text2">5</p>
+                </a>
+
+                <a href="#" class="todolist__left__second__link3">
+                    <i class="fa-solid fa-bars active-menu"></i>
+                    <p class="todolist__left__second__link3__text1">MIS DesiCrew</p>
+                </a>
+
+                <a href="#" class="todolist__left__second__link4">
+                    <i class="fa-solid fa-plus active-plus"></i>
+                    <p class="todolist__left__second__link4__text1">New List</p>
+                </a>
+
+            </div>
+
+        </div>
+        <!-- ! End of left -->
+
+
+
+
+
+
+
+        <!-- ! Start right  -->
+        <div class="todolist__right">
+            <div class="todolist__right__nav">
+                <div class="todolist__right__nav__wrap">
+                    <p class="todolist__right__nav__text1">My Day</p>
+                    <p class="todolist__right__nav__text2">Wednesday, April 19</p>
+                </div>
+                <i class="fa-solid fa-lightbulb active-bulb"></i>
+            </div>
+
+
+            <ul class="todolist__right__lists">
+                <li class="todolist__right__lists__item">
+                    <input type="checkbox" id="coding" name="interest" value="coding">
+                    <label for="coding">Build developer conference planning</label>
+                </li>
+                <li class="todolist__right__lists__item">
+                    <input type="checkbox" id="device" name="interest" value="device">
+                    <label for="device">Microsoft devices event planning</label>
+                </li>
+                <li class="todolist__right__lists__item">
+                    <input type="checkbox" id="amp" name="interest" value="amp">
+                    <label for="amp">Microsoft data amp event coverage</label>
+                </li>
+                <li class="todolist__right__lists__item">
+                    <input type="checkbox" id="Wunderlist" name="interest" value="Wunderlist">
+                    <label for="Wunderlist">Future of Wunderlist query to Microsoft PR</label>
+                </li>
+                <li class="todolist__right__lists__item">
+                    <input type="checkbox" id="Clean" name="interest" value="Clean">
+                    <label for="Clean">Clean up C drive from Yoga</label>
+                </li>
+                <li class="todolist__right__lists__item">
+                    <input type="checkbox" id="Windows" name="interest" value="Windows">
+                    <label for="Windows">Windows Cloud How To</label>
+                </li>
+            </ul>
+
+
+
+            <!-- <div class="todolist_right__lists">
+                <div class="">
+                    <input type="checkbox" id="coding" name="interest" value="coding">
+                    <label for="coding">Build developer conference planning</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="device" name="interest" value="device">
+                    <label for="device">Microsoft devices event planning</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="amp" name="interest" value="amp">
+                    <label for="amp">Microsoft data amp event coverage</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Wunderlist" name="interest" value="Wunderlist">
+                    <label for="Wunderlist">Future of Wunderlist query to Microsoft PR</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Clean" name="interest" value="Clean">
+                    <label for="Clean">Clean up C drive from Yoga</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Windows" name="interest" value="Windows">
+                    <label for="Windows">Windows Cloud How To</label>
+                </div>
+            </div> -->
+
+
+            <div class="todolist__right__wrap">
+                <input type="text" class="todolist__right__wrap__add" placeholder="Add a to-do">
+                <button class="todolist__right__wrap__btn">Add</button>
+            </div>
+
+        </div>
+        <!-- ! End of right -->
+    </div>
+
+
+
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
