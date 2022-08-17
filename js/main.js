@@ -31,16 +31,3 @@ elForm.addEventListener("submit", (e) => {
 
 
 
-// console.log(elList, elForm, elInput);
-// function addItem(e){
-//     e.preventDefault()    
-
-//     const newLi = document.createElement("li");
-//     newLi.textContent = elInput.value.trim()
-
-//     elList.appendChild(newLi)
-
-//     elInput.value = ""
-// }
-
-// elBtn.addEventListener("submit", addItem(e));
