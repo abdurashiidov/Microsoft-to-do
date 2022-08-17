@@ -26,7 +26,6 @@ elForm.addEventListener("submit", (e) => {
     newLi.appendChild(text)
     elList.appendChild(newLi)
 
-
     elInput.value = ""
 })
 
