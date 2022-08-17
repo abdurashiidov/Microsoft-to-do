@@ -28,6 +28,3 @@ elForm.addEventListener("submit", (e) => {
 
     elInput.value = ""
 })
-
-
-
