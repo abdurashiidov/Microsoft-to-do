@@ -167,6 +167,16 @@ body{
     }
 }
 
+.todolist__right__lists__item{
+    display: flex;
+}
+.li-active{
+    margin: 0;
+    padding: 0;
+}
+.active-checkbox{
+    margin-right: 10px;
+}
 
 
 // ! actives

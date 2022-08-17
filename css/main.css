@@ -604,6 +604,21 @@ body {
   font-size: 16px;
 }
 
+.todolist__right__lists__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.li-active {
+  margin: 0;
+  padding: 0;
+}
+
+.active-checkbox {
+  margin-right: 10px;
+}
+
 .active-lupa {
   color: blue;
 }
