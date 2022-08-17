@@ -1,7 +1,7 @@
 const elList = document.querySelector(".todolist__right__lists") //! ul
 const elForm = document.querySelector(".todolist__right__wrap") //! form
 const elInput = document.querySelector(".todolist__right__wrap__add") //! input
-const elBtn = document.querySelector(".todolist__right__wrap__btn") //! btn
+const elBtn = document.querySelector(".todolist__right__wrap__btn"); //! btn
 
 elForm.addEventListener("submit", (e) => {
     e.preventDefault()
