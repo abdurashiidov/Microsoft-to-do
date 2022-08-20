@@ -1,66 +1,43 @@
-const elList = document.querySelector(".todolist__right__lists"); //! ul
-const elForm = document.querySelector(".todolist__right__wrap"); //! form
-const elInput = document.querySelector(".todolist__right__wrap__add"); //! input
-const elBtn = document.querySelector(".todolist__right__wrap__btn"); //! btn
-
+let elForm = document.querySelector(".todo-form"); 
+let elList = document.querySelector(".todo-list");
+let elInput = document.querySelector(".todo-input");
+let elTemplate = document.querySelector("#todo-item--template").content;
 
 const todosArr = []
-elForm.addEventListener("submit", (e) => {
-    e.preventDefault()
+function daleteBtn(e){
+      const todoId = e.target.dataset.id
+      let findindex = todosArr.findIndex((elem)=> elem.id == todoId)
+      todosArr.splice(findindex,1)
+      renderTodo(todosArr,elList)
+}
 
-    
-    let newCheckbox = document.createElement("input")
-    let newLi = document.createElement("li")
-    let text = document.createElement("p")
-    let edit = document.createElement("button")
-    let del = document.createElement("button")
-    let div1 = document.createElement("div")
-    let div2 = document.createElement("div")
+function renderTodo(todoArr,element){
+      element.innerHTML = null
+      todoArr.forEach((todo)=>{
+            const cloneTemplate = elTemplate.cloneNode(true)
+            const elTitle = cloneTemplate.querySelector('.todo-item-complete-text');
+            const elDaleteBtn = cloneTemplate.querySelector('.todo-item-delete-btn');
+            const elCheckBox = cloneTemplate.querySelector('.todo-input-complete');
 
-    newCheckbox.setAttribute("type", "checkbox")
+            elTitle.textContent = todo.text,
+            elCheckBox.checked = todo.isCompeted,
+            elDaleteBtn.dataset.id = todo.id
 
-    const inputValue = elInput.value.trim();
-    // newCheckbox.checked = todo.isCompeted,
-        // event.preventDefault();
-        todosArr.push({
-              id:todosArr.length + 1,
-              text:inputValue,
-              isCompeted:false
-  
-        })
-        // renderTodo(todosArr,elList)
-        elInput.value=null
+            elDaleteBtn.addEventListener('click',daleteBtn)
 
+            element.appendChild(cloneTemplate)
+      })
+}
 
+elForm.addEventListener('submit',(event)=>{
+      event.preventDefault();
+      const inputValue = elInput.value.trim();
+      todosArr.push({
+            id:todosArr.length + 1,
+            text:inputValue,
+            isCompeted:false
 
-    
-    newLi.className = "todolist__right__lists__item"
-    text.className = "li-active"
-    newCheckbox.className = "active-checkbox"    
-    div1.className = "active-div1"
-
-    text.textContent = elInput.value.trim()
-    edit.textContent = "edit"
-    del.textContent = "delete"
-    
-    // newLi.appendChild(newCheckbox)
-    // newLi.appendChild(text)
-    elList.appendChild(newLi)
-
-    
-    newLi.appendChild(edit)
-    newLi.appendChild(del)
-    
-    div1.appendChild(newCheckbox)
-    div1.appendChild(text)
-    
-    newLi.appendChild(div1)
-    newLi.appendChild(div2)
-
-    div2.appendChild(edit)
-    div2.appendChild(del)
-    
-
-
-    elInput.value = ""
+      })
+      renderTodo(todosArr,elList)
+      elInput.value=null
 })
