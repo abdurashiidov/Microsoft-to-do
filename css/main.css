@@ -608,6 +608,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .li-active {
@@ -617,6 +620,19 @@ body {
 
 .active-checkbox {
   margin-right: 10px;
+}
+
+.active-edit {
+  margin-left: 200px;
+}
+
+.active-div1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .active-lupa {

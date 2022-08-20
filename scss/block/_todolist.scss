@@ -169,6 +169,7 @@ body{
 
 .todolist__right__lists__item{
     display: flex;
+    justify-content: space-between;
 }
 .li-active{
     margin: 0;
@@ -177,6 +178,16 @@ body{
 .active-checkbox{
     margin-right: 10px;
 }
+
+.active-edit{
+    margin-left: 200px;
+}
+
+.active-div1{
+    display: flex;
+    align-items: center;
+}
+
 
 
 // ! actives
