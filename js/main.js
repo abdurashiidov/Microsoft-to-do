@@ -8,7 +8,7 @@ function daleteBtn(e){
       const todoId = e.target.dataset.id
       let findindex = todosArr.findIndex((elem)=> elem.id == todoId)
       todosArr.splice(findindex,1)
-      renderTodo(todosArr,elList)
+      renderTodo(todosArr, elList)
 }
 
 function renderTodo(todoArr,element){
